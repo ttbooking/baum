@@ -1,3 +1,5 @@
+**deprecated - Please do not use any more! There will be no more updates.** 
+
 # Baum <a href="https://travis-ci.org/dogadogmbh/baum"><img src="https://travis-ci.org/dogadogmbh/baum.svg?branch=master"></a> [![Coverage Status](https://coveralls.io/repos/github/dogadogmbh/baum/badge.svg?branch=master)](https://coveralls.io/github/dogadogmbh/baum?branch=master)
 
 ## Forked from [gazsp/baum](https://github.com/gazsp/baum) - Fixed a critical bug with wrong database transaction.
