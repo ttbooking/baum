@@ -4,6 +4,7 @@ namespace Baum;
 
 use Closure;
 use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Support\Arr;
 
 /**
  * Class SetMapper
@@ -152,7 +153,7 @@ class SetMapper
     {
         $searchable = [$this->node->getKeyName()];
 
-        return array_only($attributes, $searchable);
+        return Arr::only($attributes, $searchable);
     }
 
     /**
@@ -163,7 +164,7 @@ class SetMapper
     {
         $exceptions = [$this->node->getKeyName(), $this->getChildrenKeyName()];
 
-        return array_except($attributes, $exceptions);
+        return Arr::except($attributes, $exceptions);
     }
 
     /**
