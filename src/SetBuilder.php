@@ -110,7 +110,13 @@ class SetBuilder
       $query->orderBy($this->node->getQualifiedRightColumnName());
       $query->orderBy($this->node->getQualifiedKeyName());
 
-      return $query->get();
+      return $query->get([
+          $this->node->getKeyName(),
+          $this->node->getParentColumnName(),
+          $this->node->getLeftColumnName(),
+          $this->node->getRightColumnName(),
+          $this->node->getDepthColumnName(),
+      ]);
   }
 
   /**
