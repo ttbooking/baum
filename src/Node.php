@@ -74,7 +74,7 @@ abstract class Node extends \Baum\Extensions\Eloquent\Model
     protected $scoped = [];
 
     /**
-     * The "booting" method of the model.
+     * The "booted" method of the model.
      *
      * We'll use this method to register event listeners on a Node instance as
      * suggested in the beta documentation...
@@ -109,10 +109,8 @@ abstract class Node extends \Baum\Extensions\Eloquent\Model
      * @throws \Throwable
      * @throws \Exception
      */
-    protected static function boot()
+    protected static function booted()
     {
-        parent::boot();
-
         static::creating(function (Node $node) {
             $node->setDefaultLeftAndRight();
         });
